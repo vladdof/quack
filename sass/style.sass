@@ -1,0 +1,282 @@
+*
+	box-sizing: border-box
+	outline: none
+body
+	background-color: #ffffff
+	color: #323232
+	font-family: 'Roboto', sans-serif
+	font-weight: 300
+.container
+	width: 100%
+	max-width: 976px
+	padding-right: 10px
+	padding-left: 10px
+	margin-right: auto
+	margin-left: auto
+.header
+	height: 102px
+	background-color: #282d30
+	.logo
+		text-align: center
+		&-img
+			margin-top: 6px
+.choose
+	margin-top: 67px
+	margin-bottom: 158px
+	&-title
+		margin-bottom: 57px
+		color: #282d30
+		font-size: 42px
+		font-weight: 700
+		text-align: center
+	&-form
+		input
+			// width: 303px
+			width: 31.7%
+			height: 40px
+			border: 1px solid #dcdcdc
+			border-bottom: 2px solid #dcdcdc
+			margin-right: 19px
+			&:last-child
+				margin-right: 0
+		label
+			position: absolute
+			margin-left: 10px
+			top: 50%
+			transform: translateY(-50%)
+			color: #999999
+			font-size: 12px
+			font-weight: 400
+		.first-line
+			position: relative
+			input
+				padding-left: 10px
+				color: #111111
+				font-size: 12px
+				font-weight: 400
+				&:hover
+					border-bottom: 2px solid #c4092f
+					cursor: pointer
+				&:focus
+					border-bottom: 2px solid #111111
+		.second-line
+			position: relative
+			margin-top: 30px
+			input
+				width: 100%
+				padding-left: 10px
+				color: #111111
+				font-size: 12px
+				font-weight: 400
+			& input
+				&:hover
+					border-bottom: 2px solid #c4092f
+					cursor: pointer
+				&:focus
+					border-bottom: 2px solid #111111
+		.third-line
+			position: relative
+			margin-top: 30px
+			display: flex
+			justify-content: space-between
+			.color
+				display: flex
+				.name-color
+					position: absolute
+					bottom: 80%
+					transform: translateY(-50%)
+					color: #999999
+					font-size: 12px
+					font-weight: 400
+			label
+				position: relative
+				&:hover
+					cursor: pointer
+			input[type="checkbox"]
+				display: none
+			#white 
+				& + label
+					display: inline-block
+					width: 20px
+					height: 20px
+					margin-right: 23px
+					margin-left: 0
+					background-color: #ffffff
+					border: 1px solid #dddddd
+					border-radius: 50%
+				&:checked + label
+					border: 4px solid #c4092f
+			#black 
+				& + label
+					display: inline-block
+					width: 20px
+					height: 20px
+					margin-right: 23px
+					margin-left: 0
+					background-color: #000000
+					border-radius: 50%
+				&:checked + label
+					border: 4px solid #c4092f
+			#gray 
+				& + label
+					display: inline-block
+					width: 20px
+					height: 20px
+					margin-right: 23px
+					margin-left: 0
+					background-color: #cbcbcc
+					border-radius: 50%
+				&:checked + label
+					border: 4px solid #c4092f
+			#red 
+				& + label
+					display: inline-block
+					width: 20px
+					height: 20px
+					margin-right: 23px
+					margin-left: 0
+					background-color: #d74345
+					border-radius: 50%
+				&:checked + label
+					border: 4px solid #c4092f
+			#green 
+				& + label
+					display: inline-block
+					width: 20px
+					height: 20px
+					margin-left: 0
+					background-color: #88c504
+					border-radius: 50%
+				&:checked + label
+					border: 4px solid #c4092f
+
+			#select
+				width: 31.7%
+				border: 1px solid #dcdcdc
+				border-bottom: 2px solid #dcdcdc
+				margin-right: 20px
+				margin-left: 130px
+				color: #999999
+				font-size: 12px
+				font-weight: 400
+				&:hover
+					cursor: pointer
+					border-bottom: 2px solid #c4092f
+				option
+					margin-top: 10px
+					margin-bottom: 10px
+			.choose-btn
+				width: 303px
+				padding: 0
+				border: none
+				border-radius: 4px
+				background-color: #c4092f
+				color: #ffffff
+				font-size: 16px
+				font-weight: 700
+				text-transform: uppercase
+				line-height: 40px
+				&:hover
+					cursor: pointer
+				.img-btn
+					margin-left: 5px
+.auto-stock
+	margin-bottom: 330px
+	color: #282d30
+	font-size: 15px
+	font-weight: 300
+	&_title
+		margin-bottom: 30px
+		padding-left: 10px
+		font-size: 20px
+		font-weight: 700
+		text-transform: uppercase
+		border-left: 3px solid #8b9497
+	.wrap-tabel
+		background-color: #f5f6f6
+	.table-header
+		display: flex
+		background-color: #c4092f
+		color: #ffffff
+		font-weight: 500
+		border-radius: 5px 5px 0 0
+		&_p
+			display: inline-block
+			line-height: 40px
+		.p-one
+			padding-left: 15px
+			flex-basis: 50%
+		.p-year
+			flex-basis: 6.25%
+		.p-color
+			flex-basis: 6.25%
+		.p-status
+			flex-basis: 12.5%
+		.p-price
+			flex-basis: 25%
+.list-all
+	display: flex
+	align-items: baseline
+	padding-top: 15px
+	padding-bottom: 15px
+	border-bottom: 1px solid #dcdcdc
+	&:last-child
+		border-bottom: none
+.list-description
+	flex-basis: 50%
+	padding-left: 15px
+	span
+		color: #8b9497
+		font-size: 13px
+		font-weight: 300
+.list-year
+	// margin-right: 40px
+	flex-basis: 6.25%
+.list-color
+	flex-basis: 6.25%
+	align-self: end
+	&_w
+		width: 20px
+		height: 20px
+		border-radius: 50%
+	&_black
+		background-color: #000000
+	&_white
+		background-color: #ffffff
+		border: 1px solid #dddddd
+	&_gray
+		background-color: #cbcbcc
+	&_red
+		background-color: #d74345
+	&_green
+		background-color: #88c504
+.list-status
+	flex-basis: 12.5%
+.list-price
+	font-size: 16px
+	flex-basis: 12.5%
+.list-btn
+	flex-basis: 12.5%
+	text-align: center
+	&_del
+		padding: 5px 15px
+		color: #8b9497
+		font-size: 14px
+		background-color: transparent
+		border: none
+		&:hover
+			background-color: #282d30
+			color: white
+			border-radius: 15px
+			cursor: pointer
+
+.footer
+	padding: 35px 0px
+	background-color: #282d30
+	&-des
+		color: #ffffff
+		font-size: 11px
+		text-align: center
+		display: flex
+		justify-content: center
+		align-items: center
