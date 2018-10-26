@@ -35,13 +35,9 @@ body {
     font-weight: 700;
     text-align: center; }
   .choose-form input {
-    width: 31.7%;
     height: 40px;
     border: 1px solid #dcdcdc;
-    border-bottom: 2px solid #dcdcdc;
-    margin-right: 19px; }
-    .choose-form input:last-child {
-      margin-right: 0; }
+    border-bottom: 2px solid #dcdcdc; }
   .choose-form label {
     position: absolute;
     margin-left: 10px;
@@ -52,8 +48,19 @@ body {
     font-size: 12px;
     font-weight: 400; }
   .choose-form .first-line {
-    position: relative; }
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; }
+    .choose-form .first-line_wrap {
+      max-width: 31.7%;
+      width: 100%;
+      margin-right: 25px;
+      position: relative; }
+      .choose-form .first-line_wrap:last-child {
+        margin-right: 0; }
     .choose-form .first-line input {
+      width: 100%;
       padding-left: 10px;
       color: #111111;
       font-size: 12px;
@@ -89,7 +96,10 @@ body {
     .choose-form .third-line .color {
       display: -webkit-box;
       display: -ms-flexbox;
-      display: flex; }
+      display: flex;
+      max-width: 31.7%;
+      width: 100%;
+      margin-right: 25px; }
       .choose-form .third-line .color .name-color {
         position: absolute;
         bottom: 80%;
@@ -155,11 +165,11 @@ body {
     .choose-form .third-line #green:checked + label {
       border: 4px solid #c4092f; }
     .choose-form .third-line #select {
-      width: 31.7%;
+      max-width: 31.7%;
+      width: 100%;
       border: 1px solid #dcdcdc;
       border-bottom: 2px solid #dcdcdc;
-      margin-right: 20px;
-      margin-left: 130px;
+      margin-right: 25px;
       color: #999999;
       font-size: 12px;
       font-weight: 400; }
@@ -170,7 +180,8 @@ body {
         margin-top: 10px;
         margin-bottom: 10px; }
     .choose-form .third-line .choose-btn {
-      width: 303px;
+      max-width: 31.7%;
+      width: 100%;
       padding: 0;
       border: none;
       border-radius: 4px;
@@ -315,3 +326,75 @@ body {
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center; }
+
+@media (max-width: 920px) {
+  .auto-stock .table-header .p-one {
+    margin-right: 10px; }
+  .list-description {
+    margin-right: 10px; } }
+
+@media (max-width: 850px) {
+  .choose {
+    margin-bottom: 100px; } }
+
+@media (max-width: 720px) {
+  .choose {
+    margin-bottom: 40px; }
+  .auto-stock {
+    margin-bottom: 425px; }
+    .auto-stock .table-header .p-one {
+      padding-left: 15px;
+      -ms-flex-preferred-size: 43%;
+      flex-basis: 43%; }
+    .auto-stock .table-header .p-year {
+      -ms-flex-preferred-size: 3.5%;
+      flex-basis: 3.5%;
+      margin-right: 20px; }
+    .auto-stock .table-header .p-color {
+      -ms-flex-preferred-size: 3.5%;
+      flex-basis: 3.5%;
+      margin-right: 14px; }
+    .auto-stock .table-header .p-status {
+      -ms-flex-preferred-size: 16%;
+      flex-basis: 16%; }
+    .auto-stock .table-header .p-price {
+      -ms-flex-preferred-size: 34%;
+      flex-basis: 34%;
+      padding-left: 10px; }
+  .list-description {
+    -ms-flex-preferred-size: 43%;
+    flex-basis: 43%;
+    padding-left: 15px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis; }
+    .list-description span {
+      white-space: normal; }
+  .list-year {
+    -ms-flex-preferred-size: 3.5%;
+    flex-basis: 3.5%;
+    margin-right: 20px; }
+  .list-color {
+    -ms-flex-preferred-size: 3.5%;
+    flex-basis: 3.5%;
+    margin-right: 24px; }
+  .list-status {
+    -ms-flex-preferred-size: 16%;
+    flex-basis: 16%; }
+  .list-price {
+    -ms-flex-preferred-size: 19%;
+    flex-basis: 19%;
+    padding-left: 10px; }
+  .list-btn {
+    -ms-flex-preferred-size: 15%;
+    flex-basis: 15%; } }
+
+@media (max-width: 600px) {
+  .choose-form .third-line #white + label {
+    margin-right: 10px; }
+  .choose-form .third-line #black + label {
+    margin-right: 10px; }
+  .choose-form .third-line #gray + label {
+    margin-right: 10px; }
+  .choose-form .third-line #red + label {
+    margin-right: 10px; } }
