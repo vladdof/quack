@@ -35,7 +35,34 @@ body
 			height: 40px
 			border: 1px solid #dcdcdc
 			border-bottom: 2px solid #dcdcdc
+			width: 100%
+			padding-left: 10px
+			color: #111111
+			font-size: 12px
+			font-weight: 400
+			&:hover
+				border-bottom: 2px solid #c4092f
+				cursor: pointer
+			&:focus
+				border-bottom: 2px solid #111111
+			&::-webkit-input-placeholder
+				color: #999999
+			&::-moz-placeholder
+				color: #999999
+			&:-moz-placeholder
+				color: #999999
+			&:-ms-input-placeholder
+				color: #999999
+			&:focus::-webkit-input-placeholder
+				color: transparent
+			&:focus::-moz-placeholder
+				color: transparent
+			&:focus:-moz-placeholder
+				color: transparent
+			&:focus:-ms-input-placeholder
+				color: transparent
 		label
+			display: none
 			position: absolute
 			margin-left: 10px
 			top: 50%
@@ -53,17 +80,6 @@ body
 				position: relative
 				&:last-child
 					margin-right: 0
-			input
-				width: 100%
-				padding-left: 10px
-				color: #111111
-				font-size: 12px
-				font-weight: 400
-				&:hover
-					border-bottom: 2px solid #c4092f
-					cursor: pointer
-				&:focus
-					border-bottom: 2px solid #111111
 		.second-line
 			position: relative
 			margin-top: 30px
@@ -249,6 +265,8 @@ body
 		width: 20px
 		height: 20px
 		border-radius: 50%
+		position: relative
+		transform: translateY(10%)
 	&_black
 		background-color: #000000
 	&_white
@@ -344,7 +362,13 @@ body
 	.list-btn
 		flex-basis: 15%
 @media (max-width: 600px)
+	.auto-stock
+		&_title
+			display: none
+		.table-header 
+			display: none
 	.choose
+		margin-bottom: 55px
 		&-form 
 			.third-line 
 				#white + label
@@ -355,4 +379,115 @@ body
 					margin-right: 10px
 				#red + label
 					margin-right: 10px
-
+	.header
+		height: 91px
+		.logo
+		   margin: 0 auto
+		   max-width: 450px
+		.logo-img
+		   width: 100%
+@media (max-width: 550px)
+	.auto-stock
+		margin-bottom: 0
+		font-size: 14px
+		.container
+			background-color: #f5f6f6
+	.list-price
+		font-size: 14px
+	.list-all
+		flex-wrap: wrap
+		justify-content: space-between
+	.list-description
+		order: 1
+		flex-basis: 48%
+		margin-right: 0
+		padding-left: 5px
+		white-space: normal
+	.list-color
+		order: 2
+		align-self: auto
+		&_w
+			transform: translateY(20%)
+	.list-price
+		order: 3
+		padding: 0
+	.list-year
+		order: 4
+		margin-right: 15px
+	.list-status
+		order: 5
+		flex-basis: 20%
+		margin-top: 25px
+		padding-left: 5px
+	.list-btn
+		order: 6
+@media (max-width: 500px)
+	.choose
+		margin-top: 47px
+		&-title
+			margin-bottom: 47px
+		&-form 
+			.first-line
+				flex-wrap: wrap
+				&_wrap
+					margin-right: 0
+					max-width: 48%
+				&_name
+					max-width: 100%
+					margin-bottom: 30px
+				&_year
+					margin-right: 4%
+			.third-line
+				flex-wrap: wrap
+				margin-top: 40px
+				.color
+					max-width: 100%
+					margin-right: 0
+					margin-bottom: 30px
+					position: relative
+					.name-color
+						bottom: 100%
+				#select
+					max-width: 48%
+					margin-right: 4%
+					padding-left: 5px
+				.choose-btn
+					max-width: 48%
+	.list-color
+		margin-right: 0
+	.list-price
+		flex-basis: 25%
+	.list-status
+		flex-basis: 25%
+@media (max-width: 420px)
+	.header
+		height: 81px
+		.logo
+			max-width: 297px
+			&-img
+				margin-top: 15px
+	.choose
+		margin-top: 30px
+		&-title
+			margin-bottom: 30px
+	.list-description
+		flex-basis: 47%
+		margin-right: 4%
+	.list-year
+		flex-basis: 15.6666%
+		margin-right: 0
+		padding-left: 5px
+	.list-color
+		// flex-basis: 11.75%
+		flex-basis: 5.75%
+	.list-status
+		flex-basis: 47.3333%
+		padding-left: 0
+	.list-price
+		flex-basis: 35.25%
+		padding-left: 8%
+	.list-btn
+		flex-basis: 20%
+@media (max-width: 350px)
+	.list-price
+		padding-left: 4%

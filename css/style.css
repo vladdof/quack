@@ -37,8 +37,35 @@ body {
   .choose-form input {
     height: 40px;
     border: 1px solid #dcdcdc;
-    border-bottom: 2px solid #dcdcdc; }
+    border-bottom: 2px solid #dcdcdc;
+    width: 100%;
+    padding-left: 10px;
+    color: #111111;
+    font-size: 12px;
+    font-weight: 400; }
+    .choose-form input:hover {
+      border-bottom: 2px solid #c4092f;
+      cursor: pointer; }
+    .choose-form input:focus {
+      border-bottom: 2px solid #111111; }
+    .choose-form input::-webkit-input-placeholder {
+      color: #999999; }
+    .choose-form input::-moz-placeholder {
+      color: #999999; }
+    .choose-form input:-moz-placeholder {
+      color: #999999; }
+    .choose-form input:-ms-input-placeholder {
+      color: #999999; }
+    .choose-form input:focus::-webkit-input-placeholder {
+      color: transparent; }
+    .choose-form input:focus::-moz-placeholder {
+      color: transparent; }
+    .choose-form input:focus:-moz-placeholder {
+      color: transparent; }
+    .choose-form input:focus:-ms-input-placeholder {
+      color: transparent; }
   .choose-form label {
+    display: none;
     position: absolute;
     margin-left: 10px;
     top: 50%;
@@ -59,17 +86,6 @@ body {
       position: relative; }
       .choose-form .first-line_wrap:last-child {
         margin-right: 0; }
-    .choose-form .first-line input {
-      width: 100%;
-      padding-left: 10px;
-      color: #111111;
-      font-size: 12px;
-      font-weight: 400; }
-      .choose-form .first-line input:hover {
-        border-bottom: 2px solid #c4092f;
-        cursor: pointer; }
-      .choose-form .first-line input:focus {
-        border-bottom: 2px solid #111111; }
   .choose-form .second-line {
     position: relative;
     margin-top: 30px; }
@@ -272,7 +288,10 @@ body {
   .list-color_w {
     width: 20px;
     height: 20px;
-    border-radius: 50%; }
+    border-radius: 50%;
+    position: relative;
+    -webkit-transform: translateY(10%);
+    transform: translateY(10%); }
   .list-color_black {
     background-color: #000000; }
   .list-color_white {
@@ -390,11 +409,160 @@ body {
     flex-basis: 15%; } }
 
 @media (max-width: 600px) {
-  .choose-form .third-line #white + label {
-    margin-right: 10px; }
-  .choose-form .third-line #black + label {
-    margin-right: 10px; }
-  .choose-form .third-line #gray + label {
-    margin-right: 10px; }
-  .choose-form .third-line #red + label {
-    margin-right: 10px; } }
+  .auto-stock_title {
+    display: none; }
+  .auto-stock .table-header {
+    display: none; }
+  .choose {
+    margin-bottom: 55px; }
+    .choose-form .third-line #white + label {
+      margin-right: 10px; }
+    .choose-form .third-line #black + label {
+      margin-right: 10px; }
+    .choose-form .third-line #gray + label {
+      margin-right: 10px; }
+    .choose-form .third-line #red + label {
+      margin-right: 10px; }
+  .header {
+    height: 91px; }
+    .header .logo {
+      margin: 0 auto;
+      max-width: 450px; }
+    .header .logo-img {
+      width: 100%; } }
+
+@media (max-width: 550px) {
+  .auto-stock {
+    margin-bottom: 0;
+    font-size: 14px; }
+    .auto-stock .container {
+      background-color: #f5f6f6; }
+  .list-price {
+    font-size: 14px; }
+  .list-all {
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between; }
+  .list-description {
+    -webkit-box-ordinal-group: 2;
+    -ms-flex-order: 1;
+    order: 1;
+    -ms-flex-preferred-size: 48%;
+    flex-basis: 48%;
+    margin-right: 0;
+    padding-left: 5px;
+    white-space: normal; }
+  .list-color {
+    -webkit-box-ordinal-group: 3;
+    -ms-flex-order: 2;
+    order: 2;
+    -ms-flex-item-align: auto;
+    align-self: auto; }
+    .list-color_w {
+      -webkit-transform: translateY(20%);
+      transform: translateY(20%); }
+  .list-price {
+    -webkit-box-ordinal-group: 4;
+    -ms-flex-order: 3;
+    order: 3;
+    padding: 0; }
+  .list-year {
+    -webkit-box-ordinal-group: 5;
+    -ms-flex-order: 4;
+    order: 4;
+    margin-right: 15px; }
+  .list-status {
+    -webkit-box-ordinal-group: 6;
+    -ms-flex-order: 5;
+    order: 5;
+    -ms-flex-preferred-size: 20%;
+    flex-basis: 20%;
+    margin-top: 25px;
+    padding-left: 5px; }
+  .list-btn {
+    -webkit-box-ordinal-group: 7;
+    -ms-flex-order: 6;
+    order: 6; } }
+
+@media (max-width: 500px) {
+  .choose {
+    margin-top: 47px; }
+    .choose-title {
+      margin-bottom: 47px; }
+    .choose-form .first-line {
+      -ms-flex-wrap: wrap;
+      flex-wrap: wrap; }
+      .choose-form .first-line_wrap {
+        margin-right: 0;
+        max-width: 48%; }
+      .choose-form .first-line_name {
+        max-width: 100%;
+        margin-bottom: 30px; }
+      .choose-form .first-line_year {
+        margin-right: 4%; }
+    .choose-form .third-line {
+      -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+      margin-top: 40px; }
+      .choose-form .third-line .color {
+        max-width: 100%;
+        margin-right: 0;
+        margin-bottom: 30px;
+        position: relative; }
+        .choose-form .third-line .color .name-color {
+          bottom: 100%; }
+      .choose-form .third-line #select {
+        max-width: 48%;
+        margin-right: 4%;
+        padding-left: 5px; }
+      .choose-form .third-line .choose-btn {
+        max-width: 48%; }
+  .list-color {
+    margin-right: 0; }
+  .list-price {
+    -ms-flex-preferred-size: 25%;
+    flex-basis: 25%; }
+  .list-status {
+    -ms-flex-preferred-size: 25%;
+    flex-basis: 25%; } }
+
+@media (max-width: 420px) {
+  .header {
+    height: 81px; }
+    .header .logo {
+      max-width: 297px; }
+      .header .logo-img {
+        margin-top: 15px; }
+  .choose {
+    margin-top: 30px; }
+    .choose-title {
+      margin-bottom: 30px; }
+  .list-description {
+    -ms-flex-preferred-size: 47%;
+    flex-basis: 47%;
+    margin-right: 4%; }
+  .list-year {
+    -ms-flex-preferred-size: 15.6666%;
+    flex-basis: 15.6666%;
+    margin-right: 0;
+    padding-left: 5px; }
+  .list-color {
+    -ms-flex-preferred-size: 5.75%;
+    flex-basis: 5.75%; }
+  .list-status {
+    -ms-flex-preferred-size: 47.3333%;
+    flex-basis: 47.3333%;
+    padding-left: 0; }
+  .list-price {
+    -ms-flex-preferred-size: 35.25%;
+    flex-basis: 35.25%;
+    padding-left: 8%; }
+  .list-btn {
+    -ms-flex-preferred-size: 20%;
+    flex-basis: 20%; } }
+
+@media (max-width: 350px) {
+  .list-price {
+    padding-left: 4%; } }
