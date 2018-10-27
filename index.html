@@ -42,22 +42,22 @@
 				<div class="third-line">
 					<div class="color">
 						<legend class="name-color">Цвет</legend>
-						<input type="checkbox" value="white" id="white" name="color">
-						<label for="white"></label>
-						<input type="checkbox" value="black" id="black" name="color">
-						<label for="black"></label>
-						<input type="checkbox" value="gray" id="gray" name="color">
-						<label for="gray"></label>
-						<input type="checkbox" value="red" id="red" name="color">
-						<label for="red"></label>
-						<input type="checkbox" value="green" id="green" name="color">
-						<label for="green"></label>
+						<input type="radio" value="white" id="white" name="color">
+						<label for="white" id="label"></label>
+						<input type="radio" value="black" id="black" name="color">
+						<label for="black" id="label"></label>
+						<input type="radio" value="gray" id="gray" name="color">
+						<label for="gray" id="label"></label>
+						<input type="radio" value="red" id="red" name="color">
+						<label for="red" id="label"></label>
+						<input type="radio" value="green" id="green" name="color">
+						<label for="green" id="label"></label>
 					</div>
 					<select name="status" id="select">
 						<option>Статус</option>
-						<option id="yes-stock" value="">В наличии</option>
-						<option id="waiting" value="">Ожидается</option>
-						<option id="no-stock" value="">Нет в наличии</option>
+						<option id="yes-stock" value="В наличии">В наличии</option>
+						<option id="waiting" value="Ожидается">Ожидается</option>
+						<option id="no-stock" value="Нет в наличии">Нет в наличии</option>
 					</select>
 					<button class="choose-btn">Отправить <img class="img-btn" src="./img/arrow_small_right.png"> </button>
 				</div>
@@ -76,7 +76,7 @@
 					<p class="table-header_p p-status">Статус</p>
 					<p class="table-header_p p-price">Цена</p>
 				</div>
-				<div class="list-all">
+				<!--<div class="list-all">
 					<div class="list-description">1.6 MT Ambiente 85 л.с. МКПП<br><span>+ доп. опция «Радио-навигационная система Amundasen 2DIN, CD, MP3</span></div>
 					<div class="list-year">2012</div>
 					<div class="list-color">
@@ -129,14 +129,14 @@
 				<div class="list-all">
 					<div class="list-description">2.0 PowerShift Trend Sport 150 л.с. АКПП<br><span>+ доп. опция «Радио-навигационная система Amundasen 2DIN, CD, MP3</span>
 					</div>
-					<div class="list-year">2012</div>
+					<div class="list-year">2013</div>
 					<div class="list-color">
 						<div class="list-color_w list-color_green"></div>
 					</div>
 					<div class="list-status">Нет в наличии</div>
 					<div class="list-price">821 000 руб.</div>
 					<div class="list-btn"><button class="list-btn_del">Удалить</button></div>
-				</div>
+				</div>-->
 			</div>
 		</div>
 	</div>
@@ -147,5 +147,6 @@
 
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<script src="./js/field.js"></script>
+	<script src="./js/addList.js"></script>
 </body>
 </html>

@@ -128,7 +128,7 @@ body {
       position: relative; }
       .choose-form .third-line label:hover {
         cursor: pointer; }
-    .choose-form .third-line input[type="checkbox"] {
+    .choose-form .third-line input[type="radio"] {
       display: none; }
     .choose-form .third-line #white + label {
       display: inline-block;
