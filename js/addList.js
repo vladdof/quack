@@ -111,9 +111,10 @@ window.onload = function() {
 	      for (let i = 0; i < clickDel.length; i++) {
 		     	clickDel[i].onclick = () => {
 		     		let wrapBtn = document.querySelectorAll('.list-btn')[i],
-		     		 parentWrap = wrapBtn.parentNode,
-		     		     tabel1 = document.querySelector('.wrap-tabel');
-		     		tabel1.removeChild(parentWrap);
+		     		 parentWrap = wrapBtn.parentNode;
+		     		     // tabel1 = document.querySelector('.wrap-tabel');
+		     		// tabel1.removeChild(parentWrap);
+		     		parentWrap.style.display = "none";
 		     	}
 	      }
 	};
@@ -121,4 +122,13 @@ window.onload = function() {
 	btnSend.addEventListener('click', function() {
 		createEl();
 	});
+
+	let del = document.querySelectorAll('.list-btn_del');
+	for (let i = 0; i < del.length; i++) {
+     	del[i].onclick = () => {
+     		let wrapBtn = document.querySelectorAll('.list-btn')[i],
+     		 parentWrap = wrapBtn.parentNode;
+     		parentWrap.style.display = "none";
+     	}
+	}
 }
