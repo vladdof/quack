@@ -53,8 +53,8 @@ window.onload = function() {
 			// заполнили цвет
 			let checked = document.querySelector('input:checked');
 			if (checked) {
-			  let b = checked.value;
-			  color.classList.add(`list-color_${b}`);
+				let b = checked.value;
+				color.classList.add(`list-color_${b}`);
 			} else {
 				return alert('Укажите цвет');
 			}
